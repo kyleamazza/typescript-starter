@@ -8,6 +8,7 @@
     "build": "tsc",
     "lint": "eslint \"src/**/*\"",
     "lint:fix": "eslint --fix \"src/**/*\"",
+    "lint:staged": "lint-staged",
     "start:dev": "ts-node src/index.ts",
     "start:dev:watch": "nodemon",
     "test": "jest",
@@ -28,10 +29,8 @@
     "@types/node": "^12.7.5",
     "@typescript-eslint/eslint-plugin": "^2.3.3",
     "@typescript-eslint/parser": "^2.3.3",
-    "cpy-cli": "^2.0.0",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
     "husky": ">=1",
     "lint-staged": ">=8",
@@ -47,8 +46,8 @@
     }
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
+    "*.(j|t)s": [
+      "eslint",
       "git add"
     ]
   }
