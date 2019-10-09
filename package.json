@@ -1,0 +1,41 @@
+{
+  "name": "node-ts-convict-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "start:dev": "ts-node src/index.ts",
+    "start:dev:watch": "nodemon",
+    "test": "jest",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint:fix"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "dependencies": {
+    "app-root-path": "^2.2.1",
+    "convict": "^5.1.0",
+    "dotenv": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/app-root-path": "^1.2.4",
+    "@types/convict": "^4.2.1",
+    "@types/node": "^12.7.5",
+    "@typescript-eslint/eslint-plugin": "^2.2.0",
+    "@typescript-eslint/parser": "^2.2.0",
+    "cpy-cli": "^2.0.0",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.2",
+    "rimraf": "^3.0.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.6.3"
+  }
+}
